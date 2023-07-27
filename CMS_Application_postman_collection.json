@@ -1,0 +1,466 @@
+{
+	"info": {
+		"_postman_id": "7e5a7975-ab41-4b48-b0b5-d21f13968d3d",
+		"name": "CMS_Application",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "sign_up",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "kishan",
+							"type": "default"
+						},
+						{
+							"key": "email",
+							"value": "kishan@gmail.com",
+							"type": "default"
+						},
+						{
+							"key": "password",
+							"value": "kishan123",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/sign_up",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"sign_up"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "kishan",
+							"type": "default"
+						},
+						{
+							"key": "password",
+							"value": "kishan123",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create_post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "tital 1",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "desc 1",
+							"type": "text"
+						},
+						{
+							"key": "content",
+							"value": "content 1",
+							"type": "text"
+						},
+						{
+							"key": "author_id",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "is_public_post",
+							"value": "true",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/create_post",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"create_post"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update_post",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token eaea9247a94612719d4e117e1ba2d446c5c321d2",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "post_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "title",
+							"value": "update title",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "",
+							"type": "default",
+							"disabled": true
+						},
+						{
+							"key": "content",
+							"value": "",
+							"type": "default",
+							"disabled": true
+						},
+						{
+							"key": "is_public_post",
+							"value": "",
+							"type": "default",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/update_post",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"update_post"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete_post",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token b2bb1ac3d1bd5670544cae125b25a8662ccae899",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "post_id",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/delete_post",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"delete_post"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_post_by_id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token eaea9247a94612719d4e117e1ba2d446c5c321d2",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "post_id",
+							"value": "2",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/get_post_by_id",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"get_post_by_id"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user_all_posts",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token b2bb1ac3d1bd5670544cae125b25a8662ccae899",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/user_all_posts",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"user_all_posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_all_posts",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token eaea9247a94612719d4e117e1ba2d446c5c321d2",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/get_all_posts",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"get_all_posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post_like_dislike",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token eaea9247a94612719d4e117e1ba2d446c5c321d2",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "post_id",
+							"value": "1",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/post_like_dislike",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"post_like_dislike"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update_profile",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token cb11d37d8ca854a4d0bf863e09b58061896a04fd",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "",
+							"type": "default",
+							"disabled": true
+						},
+						{
+							"key": "mobile_no",
+							"value": "87585857142",
+							"type": "default"
+						},
+						{
+							"key": "city",
+							"value": "rajkot",
+							"type": "default"
+						},
+						{
+							"key": "country",
+							"value": "india",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/update_profile",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"update_profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete_profile",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token cb11d37d8ca854a4d0bf863e09b58061896a04fd",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_id",
+							"value": "2",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/delete_profile",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"delete_profile"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
