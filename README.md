@@ -1,14 +1,14 @@
-# CMS Application
+# cms_application_task
 
 ## Setup
 
-Following documentation demonstrates installation and set up of User Managment Tool on Ubuntu system
+Following documentation demonstrates installation and set up of cms application on Ubuntu system
 
 The first thing to do is to clone the repository:
 
 ```sh
-$ git clone https://github.com/kishan505/CMS_Application.git
-$ cd CMS_Application
+$ git clone https://github.com/kishan505/cms_application_task.git
+$ cd cms_application_task
 ```
 
 Create a virtual environment to install dependencies in and activate it:
